@@ -1,0 +1,32 @@
+.dialog{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.item{
+    width: 100%;
+}
+
+.cpf{
+    width: 50%;
+}
+
+.tel{
+    width: 23%;
+    margin: 0 15px;
+}
+
+.select{
+    width: 23%;
+}
+
+.aviso{
+    color: #2196f3;
+    font-style: italic;
+}
+
+.btn-salvar{
+    background-color: #2196f3;
+    color: white;
+}

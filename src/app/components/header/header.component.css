@@ -1,0 +1,54 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar{
+    background-color: #5e5e5e;
+    color: white;    
+}
+
+.menu-icon{
+    background-color: #5e5e5e;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.example-icon{
+    margin-right: 10px;
+}
+
+
+.search{
+    display: flex;
+    align-items: center;
+    margin-right: 30vw;
+    width: 30vw;
+    height: 60%;
+    align-items: center;
+}
+
+.search .search-icon{
+    position: absolute;
+}
+
+.search-icon{
+    padding: 5px;
+}
+
+.input-search{
+    background: #717171;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 80%;
+    height: 100%;
+    font-size: 15px;
+    text-indent: 30px;
+}
+
+.input-search::placeholder{
+    margin-left: 10px;
+    color: white;
+}
+

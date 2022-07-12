@@ -1,0 +1,36 @@
+.card{
+    height: 50px;
+    padding: 0;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 05%;
+    margin-right: 50px;
+}
+
+.btn{
+    border: none;
+    background: none;
+}
+
+.btn-delete{
+    color: red;
+}
+
+

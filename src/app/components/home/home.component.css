@@ -1,0 +1,15 @@
+.container{
+    margin: 0 10%;
+}
+
+.div-btn{
+    display: flex;
+    align-items: flex-end;
+    height: 80vh;
+    margin-left: 95vw;
+}
+
+.btn-add{
+    background-color: #e53935;
+}
+
