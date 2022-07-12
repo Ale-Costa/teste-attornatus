@@ -1,9 +1,9 @@
-<mat-card class="card">
+<mat-card class="card" *ngFor="let user of users">
     <div class="items">
         <div class="info">            
             <mat-icon>person</mat-icon>
-            <p>Ale Costa</p>
-            <p>alexandre@attornatus.com.br</p>
+            <p>{{ user.nome }}</p>
+            <p>{{ user.email }}</p>
         </div>
         <div class="edit">
             <button mat-icon-button class="btn" (click)="openDialog()">
