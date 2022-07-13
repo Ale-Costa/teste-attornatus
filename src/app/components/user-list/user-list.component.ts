@@ -13,9 +13,7 @@ export class UserListComponent implements OnInit {
 
   users: Array<User> = [];
 
-  constructor(
-    public dialog: MatDialog,
-    private userService: UserService) { }
+  constructor(public dialog: MatDialog, private userService:UserService) { }
 
   ngOnInit() {
     this.getUsers();
@@ -28,6 +26,7 @@ export class UserListComponent implements OnInit {
   getUsers(){
     this.userService.getUsers().subscribe(resposta =>{
       this.users = resposta;
+      console.log(this.users);
     })
   }
 
