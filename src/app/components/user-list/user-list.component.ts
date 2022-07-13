@@ -16,7 +16,7 @@ export class UserListComponent implements OnInit {
   constructor(public dialog: MatDialog, private userService:UserService) { }
 
   ngOnInit() {
-    this.getUsers();
+    //this.getUsers();
   }
 
   openDialog(){

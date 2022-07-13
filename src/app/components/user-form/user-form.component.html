@@ -1,33 +1,35 @@
 <div class="dialog">
   <h4 mat-dialog-title>Adicionar novo usuario</h4>
-  <mat-dialog-content>
-    <mat-form-field appearance="standard" class="item">
-      <mat-label>Usuario (e-mail)*</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field appearance="standard" class="item">
-      <mat-label>Nome completo*</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field appearance="standard" class="item-d cpf">
-      <mat-label>CPF*</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field appearance="standard" class="item-d tel">
-      <mat-label>Numero de telefone*</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field appearance="standard" class="item-d select">
-      <select matNativeControl required>
-        <option value="celular">CELULAR</option>
-        <option value="fixo">FIXO</option>
-      </select>
-    </mat-form-field>
-    <p class="aviso">O usuário receberá uma senha provisória para acesso ao sistema por SMS</p>
-  </mat-dialog-content>
-  <mat-dialog-actions>
-    <button mat-flat-button mat-dialog-close class="btn-salvar">SALVAR</button>
-  </mat-dialog-actions>
+  <form [formGroup]="formulario">
+    <mat-dialog-content>
+      <mat-form-field appearance="standard" class="item">
+        <mat-label>Usuario (e-mail)*</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+      <mat-form-field appearance="standard" class="item">
+        <mat-label>Nome completo*</mat-label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+      <mat-form-field appearance="standard" class="item-d cpf">
+        <mat-label>CPF*</mat-label>
+        <input matInput formControlName="cpf">
+      </mat-form-field>
+      <mat-form-field appearance="standard" class="item-d tel">
+        <mat-label>Numero de telefone*</mat-label>
+        <input matInput formControlName="telefone">
+      </mat-form-field>
+      <mat-form-field appearance="standard" class="item-d select">
+        <select matNativeControl required formControlName="tipoTelefone">
+          <option value="celular">CELULAR</option>
+          <option value="fixo">FIXO</option>
+        </select>
+      </mat-form-field>
+      <p class="aviso">O usuário receberá uma senha provisória para acesso ao sistema por SMS</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-flat-button mat-dialog-close class="btn-salvar" (click)="createUser()">SALVAR</button>
+    </mat-dialog-actions>
+  </form>
 </div>
 
 
