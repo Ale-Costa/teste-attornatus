@@ -8,7 +8,7 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  apiUrl = 'https://sheet.best/api/sheets/a27917fd-27c4-49d9-8d5c-d70f4128a3f0';
+  apiUrl = 'https://sheet.best/api/sheets/80e82b02-b3a5-4342-9ead-20543c26a0ad';
  
 
   constructor(private httpClient: HttpClient) { }
@@ -18,7 +18,6 @@ export class UserService {
   }
 
   postUser(user: User):Observable<User>{
-    console.log(user);
     return this.httpClient.post<User>(this.apiUrl, user);
   }
 

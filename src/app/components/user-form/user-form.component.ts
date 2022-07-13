@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-form',
@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 export class UserFormComponent implements OnInit {
 
   formulario: FormGroup;
-  
+
+ 
 
   constructor(
     private formBuilder: FormBuilder,
@@ -48,13 +49,15 @@ export class UserFormComponent implements OnInit {
   createUser(){
     this.userService.postUser(this.formulario.value).subscribe(resposta =>{
       console.log('Cadastrado!');
+      window.location.reload()
     })
   }
 
   updateUser(){
     this.userService.updateUser(this.data, this.formulario.value).subscribe(resposta =>{
       console.log('Atualizado');
-    })   
+      window.location.reload()
+    })  
   }
 
   saveButton(){

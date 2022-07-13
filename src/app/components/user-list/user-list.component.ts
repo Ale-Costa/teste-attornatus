@@ -16,7 +16,7 @@ export class UserListComponent implements OnInit {
   constructor(public dialog: MatDialog, private userService:UserService) { }
 
   ngOnInit() {
-    //this.getUsers();
+    this.getUsers();
   }
 
   openDialog(id){
@@ -28,13 +28,13 @@ export class UserListComponent implements OnInit {
   getUsers(){
     this.userService.getUsers().subscribe(resposta =>{
       this.users = resposta;
-      console.log(this.users);
     })
   }
 
   deleteUser(id){
     this.userService.deleteUser(id).subscribe(resposta =>{
       console.log('deletado');
+      window.location.reload()
     })
   }
 
