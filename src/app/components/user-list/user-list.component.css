@@ -1,6 +1,7 @@
 .card{
     height: 50px;
     padding: 0;
+    margin: 15px 0;
 }
 
 .items{
@@ -13,7 +14,18 @@
     display: flex;
     align-items: center;
     width: 60%;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.nome{
+    width: 45%;
+    text-align: center;
+}
+
+.email{
+    width: 45%;
+    text-align: center;
 }
 
 .edit{

@@ -8,12 +8,8 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  apiUrl = 'https://sheet.best/api/sheets/c9cbfdac-d8a6-495f-ab82-d9c080015b13';
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  }
+  apiUrl = 'https://sheet.best/api/sheets/a27917fd-27c4-49d9-8d5c-d70f4128a3f0';
+ 
 
   constructor(private httpClient: HttpClient) { }
 
@@ -23,6 +19,18 @@ export class UserService {
 
   postUser(user: User):Observable<User>{
     console.log(user);
-    return this.httpClient.post<User>(this.apiUrl, user, this.httpOptions);
+    return this.httpClient.post<User>(this.apiUrl, user);
+  }
+
+  getUser(id: number):Observable<User[]>{
+    return this.httpClient.get<User[]>(`${this.apiUrl}/id/${id}`);      
+  }
+
+  updateUser(id: number, user: User):Observable<User>{
+    return this.httpClient.put<User>(`${this.apiUrl}/id/${id}`, user)
+  }
+
+  deleteUser(id: number):Observable<User>{
+    return this.httpClient.delete<User>(`${this.apiUrl}/id/${id}`)
   }
 }

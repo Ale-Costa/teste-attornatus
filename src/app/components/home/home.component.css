@@ -2,14 +2,25 @@
     margin: 0 10%;
 }
 
+.titulo{
+    margin-left:  20px;
+}
+
 .div-btn{
     display: flex;
     align-items: flex-end;
-    height: 80vh;
-    margin-left: 95vw;
+    flex-direction: row-reverse;
+    height: 100%;
+    padding: 15px;
 }
 
 .btn-add{
     background-color: #e53935;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
 }
 

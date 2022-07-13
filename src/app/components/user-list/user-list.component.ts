@@ -19,14 +19,22 @@ export class UserListComponent implements OnInit {
     //this.getUsers();
   }
 
-  openDialog(){
-    this.dialog.open(UserFormComponent);
+  openDialog(id){
+    this.dialog.open(UserFormComponent, {
+      data: id
+    });
   }
 
   getUsers(){
     this.userService.getUsers().subscribe(resposta =>{
       this.users = resposta;
       console.log(this.users);
+    })
+  }
+
+  deleteUser(id){
+    this.userService.deleteUser(id).subscribe(resposta =>{
+      console.log('deletado');
     })
   }
 
